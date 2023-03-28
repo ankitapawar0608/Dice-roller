@@ -8,8 +8,8 @@
     <title>Roll a Dice</title>
 
     <style>
-          body {
-            background-color:#ffe5e5;
+        body {
+            background-color: #ffe5e5;
         }
 
         .text-container {
@@ -52,16 +52,17 @@
             margin-top: 50px;
             margin-left: 240px;
         }
-        .btn-roll{
+
+        .btn-roll {
             font-size: 40px;
             margin-top: 70px;
             margin-left: 190px;
             padding-left: 22px;
             padding-right: 22px;
-            background-color:  #d47e41;
+            background-color: #d47e41;
             border-radius: 6px;
         }
-  </style>
+    </style>
 </head>
 
 <body>
@@ -71,59 +72,76 @@
     </div>
 
     <div class="dice-roller-container">
+        <!-- <img src="dice1.png" class="dice-img" id="dice-img"> -->
         <img src="dice1.png" class="dice-img" id="dice-img">
 
         <div class="roll-num" id="dice-txt">1</div>
- 
-       <button class="btn-roll" onclick="roll()">  Roll</button>
-       
+
+
+        <button class="btn-roll" , onclick="roll()">Roll </button>
     </div>
 
 
 
 
     <script>
-         function roll()
-         {
-         const min = 1;
-         const max = 6;
-         const num= Math.floor(Math.random()*(max - min + 1)) + min;
-         const diceImg = document.getElementById("dice-img")
-         const diceTxt = document.getElementById("dice-txt")
-         if(num==1)
-         {
-            diceImg.src = "dice1.png"
-            diceTxt.innerHTML ="1";
-         }
-          else if(num==2)
-         {
-            diceImg.src = "dice2.png"
-            diceTxt.innerHTML ="2";
-         }
-         else if(num==3)
-         {
-            diceImg.src = "dice3.png"
-            diceTxt.innerHTML ="3";
-         }
 
-         else if(num==4)
-         {
-            diceImg.src = "dice4.png"
-            diceTxt.innerHTML ="4";
-         }
 
-         else if(num==5)
-         {
-            diceImg.src = "dice5.png"
-            diceTxt.innerHTML ="5";
-         }
 
-         else (num==6)
-         {
-            diceImg.src = "dice6.png"
-            diceTxt.innerHTML ="6";
-         }
-         }
+        //   function roll(){
+        //     const min = 1;
+        //     const max = 6;
+        //     const number = Math.floor(Math.random() * (max - min + 1)) + min ;
+
+        //     document.getElementById("dice-txt").innerHTML = number;
+
+        //     const diceImg = document.getElementById("dice-img")
+
+        //     const diceimgs = [ "dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"]
+
+        //     diceImg.scr = diceimgs[number - 1]
+        //   }
+
+
+
+
+
+
+        function roll() {
+            const min = 1;
+            const max = 6;
+            const num = Math.floor(Math.random() * (max - min + 1)) + min;
+            const diceImg = document.getElementById("dice-img")
+            const diceTxt = document.getElementById("dice-txt")
+            if (num == 1) {
+                diceImg.src = "dice1.png"
+                diceTxt.innerHTML = "1";
+            }
+            else if (num == 2) {
+                diceImg.src = "dice2.png"
+                diceTxt.innerHTML = "2";
+            }
+            else if (num == 3) {
+                diceImg.src = "dice3.png"
+                diceTxt.innerHTML = "3";
+            }
+
+            else if (num == 4) {
+                diceImg.src = "dice4.png"
+                diceTxt.innerHTML = "4";
+            }
+
+            else if (num == 5) {
+                diceImg.src = "dice5.png"
+                diceTxt.innerHTML = "5";
+            }
+
+            else (num == 6)
+            {
+                diceImg.src = "dice6.png"
+                diceTxt.innerHTML = "6";
+            }
+        }
 
 
     </script>
